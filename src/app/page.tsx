@@ -1,7 +1,9 @@
+import PostList from '@components/home/PostList'
+
 const HomePage = () => {
   return (
-    <main>
-      <div>Home Page</div>
+    <main className='bg-amber-200 rounded-md p-4 drop-shadow-sm'>
+      <PostList />
     </main>
   )
 }
