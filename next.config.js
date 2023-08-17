@@ -4,7 +4,7 @@ const nextConfig = {
     github: {
       token: process.env.GITHUB_TOKEN,
       api: process.env.GITHUB_API,
-      rawContent: process.envGITHUB_RAW_CONTENT,
+      rawContent: process.env.GITHUB_RAW_CONTENT,
     },
   },
 }

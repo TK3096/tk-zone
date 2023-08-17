@@ -1,9 +1,16 @@
 import PostList from '@components/home/PostList'
+import { getPosts } from '@utils/post'
 
-const HomePage = () => {
+const HomePage = async () => {
+  const posts = await getPosts()
+
+  if (!posts) {
+    return <div>Not Found</div>
+  }
+
   return (
     <main className='bg-amber-200 rounded-md p-4 drop-shadow-sm'>
-      <PostList />
+      <PostList posts={posts} />
     </main>
   )
 }

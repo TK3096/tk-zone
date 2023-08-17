@@ -7,6 +7,7 @@ type PostMeta = {
   title: string
   date: string
   description: string
+  category: string
 }
 
 type Post = {

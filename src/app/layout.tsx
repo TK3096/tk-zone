@@ -26,7 +26,7 @@ const RootLayout = (props: Props) => {
         className={`${kanit.className} bg-gradient-to-tl from-amber-700 via-amber-400 to-yellow-200`}
       >
         <Navbar />
-        <main className='min-h-screen md:max-w-[720px] lg:max-w-[900px] mx-auto px-5 md:px-0 pt-16'>
+        <main className='min-h-screen md:max-w-[720px] lg:max-w-[900px] mx-auto px-5 md:px-0 pt-16 prose prose-md'>
           {children}
         </main>
       </body>

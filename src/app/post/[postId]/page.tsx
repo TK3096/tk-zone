@@ -1,17 +1,27 @@
 import PostContent from '@components/post/PostContent'
 
-const mock: Post = {
-  meta: {
-    id: '123',
-    title: 'Test Mock',
-    date: '2023/08/15',
-    description: '',
-  },
-  content: 'Hello',
+import { getPostContent } from '@utils/post'
+
+import 'highlight.js/styles/github-dark.css'
+
+type Props = {
+  params: {
+    postId: string
+  }
 }
 
-const PostPage = () => {
-  return <PostContent post={mock} />
+const PostPage = async (props: Props) => {
+  const {
+    params: { postId },
+  } = props
+
+  const post = await getPostContent(`footballs/${postId}.mdx`)
+
+  if (!post) {
+    return <div>Not Found</div>
+  }
+
+  return <PostContent post={post} />
 }
 
 export default PostPage
