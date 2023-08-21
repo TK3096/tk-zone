@@ -44,6 +44,7 @@ export const getPostContent = async (
     title: string
     date: string
     description: string
+    category: string
   }>({
     source: rawMDX,
     options: {
@@ -71,7 +72,7 @@ export const getPostContent = async (
       title: frontmatter.title,
       date: frontmatter.date,
       description: frontmatter.description,
-      category: temp[0] || '',
+      category: frontmatter.category,
     },
     content,
   }
