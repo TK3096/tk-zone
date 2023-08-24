@@ -14,7 +14,7 @@ const PostList: FC<Props> = (props: Props) => {
     <ul className='flex flex-col gap-1 list-none pl-0'>
       {posts.map((post) => (
         <li key={post.meta.id} className='p-0'>
-          <Link href={`/post/${post.meta.id}`}>
+          <Link href={`/post/${post.meta.id}`} className='no-underline'>
             <PostCard {...post.meta} />
           </Link>
         </li>
