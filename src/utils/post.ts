@@ -11,7 +11,7 @@ const getRawContent = async (filename: string): Promise<string | undefined> => {
   const res = await fetch(`${config.rawContent}/${filename}`, {
     headers: {
       Accept: 'application/vnd.github+json',
-      Authorization: `Bearer ${config.token}`,
+      // Authorization: `Bearer ${config.token}`,
       'X-GitHub-Api-Version': '2022-11-28',
     },
   })
@@ -25,7 +25,7 @@ const getRepoFiletree = async (): Promise<RepoFiletree | undefined> => {
   const res = await fetch(`${config.api}?recursive=1`, {
     headers: {
       Accept: 'application/vnd.github+json',
-      Authorization: `Bearer ${config.token}`,
+      // Authorization: `Bearer ${config.token}`,
       'X-GitHub-Api-Version': '2022-11-28',
     },
   })
