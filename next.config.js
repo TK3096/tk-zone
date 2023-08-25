@@ -6,6 +6,7 @@ const nextConfig = {
       api: process.env.GITHUB_API,
       rawContent: process.env.GITHUB_RAW_CONTENT,
     },
+    revalidate: process.env.REVALIDATE || 43200,
   },
 }
 

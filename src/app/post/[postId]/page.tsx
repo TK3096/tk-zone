@@ -10,6 +10,8 @@ type Props = {
   }
 }
 
+export const revalidate = process.env.revalidate
+
 export const generateStaticParams = async () => {
   const posts = await getPosts()
 
@@ -53,7 +55,11 @@ const PostPage = async (props: Props) => {
     return <div>Not Found</div>
   }
 
-  return <PostContent post={post} />
+  return (
+    <div>
+      <PostContent post={post} />
+    </div>
+  )
 }
 
 export default PostPage
