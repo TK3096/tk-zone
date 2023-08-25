@@ -14,6 +14,7 @@ const getRawContent = async (filename: string): Promise<string | undefined> => {
       // Authorization: `Bearer ${config.token}`,
       'X-GitHub-Api-Version': '2022-11-28',
     },
+    next: { revalidate: 0 },
   })
 
   if (!res.ok) return undefined
@@ -28,6 +29,7 @@ const getRepoFiletree = async (): Promise<RepoFiletree | undefined> => {
       // Authorization: `Bearer ${config.token}`,
       'X-GitHub-Api-Version': '2022-11-28',
     },
+    next: { revalidate: 0 },
   })
 
   if (!res.ok) return undefined
