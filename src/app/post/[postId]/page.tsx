@@ -10,8 +10,6 @@ type Props = {
   }
 }
 
-export const revalidate = process.env.revalidate
-
 export const generateStaticParams = async () => {
   const posts = await getPosts()
 

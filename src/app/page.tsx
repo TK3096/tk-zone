@@ -1,8 +1,6 @@
 import PostList from '@components/home/PostList'
 import { getPosts } from '@utils/post'
 
-export const revalidate = process.env.revalidate
-
 const HomePage = async () => {
   const posts = await getPosts()
 
